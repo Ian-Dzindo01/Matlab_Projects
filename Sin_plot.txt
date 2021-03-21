@@ -1,0 +1,8 @@
+clc
+A = 2;          % amplitude
+f = 3;          % frequency(Hz)
+t = 0:0.001:1;
+xt = A*sin(2*pi*f*t)         % the sin function itself
+
+figure(1)
+plot(t, xt)                 % plot works in continuos time, unlike for stem
