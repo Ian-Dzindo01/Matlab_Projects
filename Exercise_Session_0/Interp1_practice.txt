@@ -1,0 +1,18 @@
+% x = [0 1];
+% y = [0 67];
+% plot(x,y,'o-');
+%
+% y_interp = interp1(x,y,.5)      % simple interpolation
+
+x = [0:20];
+y = x.^2;
+
+plot(x,y,'o-')
+
+x_course = linspace(0.5, 18.5, 7);
+
+y_course = interp1(x,y,x_course);
+
+
+hold on;
+plot(x_course, y_course, '^-r')

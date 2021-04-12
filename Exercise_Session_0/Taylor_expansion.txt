@@ -1,0 +1,10 @@
+function [v,i] = taylor_exp(x,toll)
+v = 0;
+i = 0;
+term = 1;
+while term >= toll
+    v = v+term;               % value of the polynomial at x
+    i = i+1;
+    term=x^i/factorial(i);
+end
+

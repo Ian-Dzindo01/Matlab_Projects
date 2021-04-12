@@ -6,3 +6,9 @@ xt = A*sin(2*pi*f*t)         % the sin function itself
 
 figure(1)
 plot(t, xt)                 % plot works in continuos time, unlike for stem
+
+
+x = linspace(0, 4*pi);
+y = sin(x)./x;
+
+plot(x,y)

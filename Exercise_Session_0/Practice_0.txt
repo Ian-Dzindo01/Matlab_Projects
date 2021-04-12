@@ -1,3 +1,5 @@
+% First five exercises in the exercise sheet 0.
+
 A = [1:6;5:10;9:14;15:20]
 % B = fliplr(A)
 

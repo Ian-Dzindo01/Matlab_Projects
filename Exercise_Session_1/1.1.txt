@@ -1,0 +1,14 @@
+format short e
+
+a = 1.483593;
+b = 1.484111;
+s = a - b;
+disp(['s = ' num2str(s)])
+
+a_ = 1.4836;
+b_ = 1.4841;
+s_ = a_ - b_;
+disp(['s_ = ' num2str(s_)])
+
+er = abs(s - s_)/abs(s);
+disp(['Error = ' num2str(er)])

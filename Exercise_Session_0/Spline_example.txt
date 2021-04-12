@@ -1,0 +1,12 @@
+x = [1 2 3 4 5];
+y = [0 1 2 1 2];
+
+xx = linspace(0, 6, 100);
+yy = spline(x, y, xx);
+
+figure;
+plot(x, y, 'ro');
+hold on;
+plot(xx, yy, 'b', 'LineWidth', 1.5)
+legend('Data Points', 'Spline Model');
+grid on;

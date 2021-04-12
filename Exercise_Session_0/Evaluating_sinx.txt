@@ -1,0 +1,10 @@
+f = @(x) x.*sin(x);
+z = linspace(0,2*pi);   % generated a 100 points
+for n = [5 11]
+    x = linspace(0,2*pi, n+1);
+    y = f(x);
+    c = polyfit(x,y,n);              % returns the polynomial coefficients for this data
+    p = polyval(c,z);                % evaluates the coefficients c for the data z, and stores it in p
+    plot(x,y,'ro',z,f(z),'r',z,p,'b')
+    pause
+end

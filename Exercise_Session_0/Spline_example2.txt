@@ -1,0 +1,30 @@
+clc;
+clear;
+close all;
+
+LB = 0;
+UB = 10;
+
+n = 3;
+x = unifrnd(LB, UB, [1 n]);
+y = unifrnd(LB, UB, [1 n]);
+
+src = [0 0];
+dest = [5 5];
+
+x = [src(1) x dest(1)];          % starting point
+y = [src(2) y dest(2)];          % destination point
+t = linspace(0, 1, numel(x));
+
+m = 100;
+tt = linspace(0, 1, m);
+xx = spline(t, x, tt);
+yy = spline(t, y, tt);
+
+figure;
+plot(x, y, 'ro');
+hold on;
+plot(xx, yy, 'b', 'LineWidth', 1.5);
+legend('Handle Points', 'Final Path');
+xlabel('x');
+ylabel('y');
